@@ -37,7 +37,7 @@ Add New Admin
                bug  bugbugbugbugbugbug               GIST                           
             bug      bugbug  bu                                                      
       bugbug          b        g                                         
-                      u         bug     Time & Date : $now_string        
+                      u         bug     
                       g            bug                                   
                        b                                                 
                         ug                                               
