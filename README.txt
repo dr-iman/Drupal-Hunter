@@ -13,7 +13,7 @@ Drupal 'Drupalgeddon2'               Remoce Command Execution        drupal-rce/
 7.54/.../8.5.1 RCE                   (CVE-2018-7600)
 									 
 Drupal Avatar Uploader               Download important files         drupal-afd/avatar-afd
-7.x-1.0-beta8 AFD		     		         (CVE-2018-9205)			 									 
+7.x-1.0-beta8 AFD		     (CVE-2018-9205)			 									 
                                      
 Drupal 5.21/6.16 DOS                 0day dos issue for drupal        drupal-dos/2009-dos
 
