@@ -95,7 +95,7 @@ avatarafd();
 
 elsif($exploit eq "drupal-dos/2009-dos" or $exploit eq "DRUPAL-DOS/2009-DOS")
 {
-
+dos()
 }
 
 
